@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home - My WishList{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero fade-in">
+    <h1 class="hero-title">Crie sua Lista de Desejos</h1>
+    <p class="hero-subtitle">
+        Organize todos os itens que você deseja ter. Nunca mais esqueça aquilo que você realmente quer!
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/wishlist/" 
+           class="btn"
+           hx-get="/wishlist/"
+           hx-target="#main-content"
+           hx-push-url="true">Ver Minha Lista</a>
+        <a href="/add-item/" 
+           class="btn btn-secondary"
+           hx-get="/add-item/"
+           hx-target="#main-content"
+           hx-push-url="true">Adicionar Item</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="feature-card fade-in">
+        <div class="feature-icon">📝</div>
+        <h3 class="feature-title">Adicione Itens</h3>
+        <p class="feature-description">
+            Adicione itens com nome, descrição, preço e categoria. Mantenha tudo organizado.
+        </p>
+    </div>
+    
+    <div class="feature-card fade-in">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Defina Prioridades</h3>
+        <p class="feature-description">
+            Marque os itens mais importantes para você. Saiba o que você mais deseja.
+        </p>
+    </div>
+    
+    <div class="feature-card fade-in">
+        <div class="feature-icon">📱</div>
+        <h3 class="feature-title">Acesse em Qualquer Lugar</h3>
+        <p class="feature-description">
+            Sua lista disponível em todos os dispositivos. Sempre que você precisar.
+        </p>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="content-card text-center">
+    <h2 class="mb-4">Comece Agora Mesmo</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+        <div>
+            <div style="font-size: 2.5rem; font-weight: bold; color: #4F46E5;">1</div>
+            <p>Crie sua conta</p>
+        </div>
+        <div>
+            <div style="font-size: 2.5rem; font-weight: bold; color: #10B981;">2</div>
+            <p>Adicione itens</p>
+        </div>
+        <div>
+            <div style="font-size: 2.5rem; font-weight: bold; color: #F59E0B;">3</div>
+            <p>Compartilhe</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

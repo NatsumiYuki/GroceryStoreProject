@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My WishList - Sua Lista de Desejos</title>
+    
+    <!-- LINK COM O ARQUIVO CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header fade-in">
+            <nav class="navbar">
+                <div class="logo">🎁 MyWishList</div>
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/wishlist/" class="nav-link">Minha Lista</a></li>
+                    <li><a href="/add-item/" class="nav-link">Adicionar Item</a></li>
+                    <li><a href="/about/" class="nav-link">Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero fade-in">
+            <h1 class="hero-title">Crie sua Lista de Desejos</h1>
+            <p class="hero-subtitle">
+                Organize todos os itens que você deseja ter. Nunca mais esqueça aquilo que você realmente quer!
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/wishlist/" class="btn">Ver Minha Lista</a>
+                <a href="/add-item/" class="btn btn-secondary">Adicionar Item</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📝</div>
+                <h3 class="feature-title">Adicione Itens</h3>
+                <p class="feature-description">
+                    Adicione itens com nome, descrição, preço e categoria. Mantenha tudo organizado.
+                </p>
+            </div>
+            
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Defina Prioridades</h3>
+                <p class="feature-description">
+                    Marque os itens mais importantes para você. Saiba o que você mais deseja.
+                </p>
+            </div>
+            
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📱</div>
+                <h3 class="feature-title">Acesse em Qualquer Lugar</h3>
+                <p class="feature-description">
+                    Sua lista disponível em todos os dispositivos. Sempre que você precisar.
+                </p>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="hero">
+            <h2 style="margin-bottom: 2rem;">Comece Agora Mesmo</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #4F46E5;">1</div>
+                    <p>Crie sua conta</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #10B981;">2</div>
+                    <p>Adicione itens</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #F59E0B;">3</div>
+                    <p>Compartilhe</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 MyWishList. Todos os direitos reservados.</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">Feito com ❤️ para organizar seus desejos</p>
+        </footer>
+    </div>
+
+    <script>
+        // Configuração do HTMX
+        document.body.addEventListener('htmx:beforeRequest', function(evt) {
+            evt.target.classList.add('loading');
+        });
+        
+        document.body.addEventListener('htmx:afterRequest', function(evt) {
+            evt.target.classList.remove('loading');
+        });
+
+        // Efeito de digitação no título
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('.hero-title');
+            const text = title.textContent;
+            title.textContent = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    title.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            typeWriter();
+        });
+    </script>
+</body>
+</html>
