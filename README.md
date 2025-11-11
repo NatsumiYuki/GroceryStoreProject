@@ -1,8 +1,8 @@
-# 🛒 Building a Grocery Store App with Django
+# 🛒 Building a Wish List App with Django
 
 ### Project Overview
 
-I'm developing a full-featured Grocery Store web application using:
+I'm developing a full-featured Wish List web application using:
   - Backend: Django (Python)
   - Frontend: HTML, CSS, JavaScript
   - Database: MySQL
