@@ -17,7 +17,7 @@ python -m venv my_env
 ```
 Activate the Virtual Environment
 ```
-my_venv\Scripts\activate
+my_env\Scripts\activate
 ```
 Install Django
 ```
