@@ -15,12 +15,12 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Verifique se está configurado
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
 
-# Para desenvolvimento
-DEBUG = True
+# Durante desenvolvimento
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 # Para produção (mais tarde)
 STATIC_ROOT = BASE_DIR / 'staticfiles'
