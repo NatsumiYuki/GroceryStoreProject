@@ -15,9 +15,10 @@
 <body>
     <div class="container">
         <!-- Header -->
+    <div class="hero-image">
         <header class="header fade-in">
             <nav class="navbar">
-                <div class="logo">🎁 MyWishList</div>
+                <div class="logo">love__/</div>
                 <ul class="nav-links">
                     <li><a href="/" class="nav-link">Home</a></li>
                     <li><a href="/wishlist/" class="nav-link">Minha Lista</a></li>
@@ -29,7 +30,7 @@
 
         <!-- Hero Section -->
         <section class="hero fade-in">
-            <h1 class="hero-title">Crie sua Lista de Desejos</h1>
+            <h1 class="hero-title">Pro futuro ideal</h1>
             <p class="hero-subtitle">
                 Organize todos os itens que você deseja ter. Nunca mais esqueça aquilo que você realmente quer!
             </p>
@@ -38,7 +39,7 @@
                 <a href="/add-item/" class="btn btn-secondary">Adicionar Item</a>
             </div>
         </section>
-
+    </div>
         <!-- Features Section -->
         <section class="features">
             <div class="feature-card fade-in">
@@ -92,32 +93,8 @@
         </footer>
     </div>
 
-    <script>
-        // Configuração do HTMX
-        document.body.addEventListener('htmx:beforeRequest', function(evt) {
-            evt.target.classList.add('loading');
-        });
-        
-        document.body.addEventListener('htmx:afterRequest', function(evt) {
-            evt.target.classList.remove('loading');
-        });
+    <script src="{% static 'js/script.js' %}"></script>
 
-        // Efeito de digitação no título
-        document.addEventListener('DOMContentLoaded', function() {
-            const title = document.querySelector('.hero-title');
-            const text = title.textContent;
-            title.textContent = '';
-            
-            let i = 0;
-            function typeWriter() {
-                if (i < text.length) {
-                    title.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                }
-            }
-            typeWriter();
-        });
-    </script>
+   
 </body>
 </html>
