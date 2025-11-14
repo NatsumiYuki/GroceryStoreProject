@@ -8,7 +8,7 @@ I'm developing a full-featured Wish List web application using:
   - Database: MySQL
   - Additional: Bootstrap for responsive design
 
-color pallet: https://coolors.co/e1b5b9-f8c7cc-81a684-6c9778-57886c-466060-0e0f19
+More information about the website inside the documentation file 
 
 ### Here's a breakdown of how Django works:
 ### 1.0 Setting up enviroment
