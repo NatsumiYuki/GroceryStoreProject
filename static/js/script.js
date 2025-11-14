@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(type, 100);
                 } else {
                     // Quando terminar, espera 2 segundos e recomeça
-                    setTimeout(typeWriter, 2000);
+                    setTimeout(typeWriter, 4000);
                 }
             }
             type();

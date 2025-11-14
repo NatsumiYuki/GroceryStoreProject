@@ -34,7 +34,7 @@ body {
 .content {
     min-height: 66.67vh;
     padding: 2rem;
-    background: white;
+    background-color: transparent;
 }
 
 /* Container principal */
@@ -43,31 +43,32 @@ body {
     padding: 0; 
 }
 
-/* Header SEM bordas */
 .header {
+    padding: 0.60 rem 0;
     margin: 0;
-    background:#57886C;
+    background: #57886C;
     backdrop-filter: blur(10px);
     border-radius: 0;
-    padding: 1rem 2rem;
-    margin-bottom: 2rem;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px; /* Add a max-width instead of huge margins */
+    margin: 0 auto; /* Center the navbar */
+    padding: 0 1rem; /* Small side padding */
 }
 
 .logo {
-    margin-left: 20rem;
+    /* REMOVE margin-left: 20rem; */
     font-size: 1.8rem;
     font-weight: bold;
     color: white;
 }
 
 .nav-links {
-    margin-right: 20rem;
+    /* REMOVE margin-right: 20rem; */
     display: flex;
     gap: 2rem;
     list-style: none;
@@ -78,7 +79,7 @@ body {
     color: white;
     font-weight: 500;
     transition: color 0.3s ease;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 0;
 }
 
@@ -90,13 +91,14 @@ body {
 /* Hero Section SEM bordas */
 .hero {
     background: transparent;
-    padding: 3rem;
+    padding: 6rem; 
     text-align: center;
     margin-bottom: 2rem;
     box-shadow: none;
 }
 
 .hero-title {
+   
     font-size: 3rem;
     font-weight: bold;
     color: white;

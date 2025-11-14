@@ -5,39 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My WishList - Sua Lista de Desejos</title>
-    
-    <!-- LINK COM O ARQUIVO CSS -->
+   
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
     <!-- HTMX -->
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-</head>
-<body>
-    <div class="container">
-        <!-- Header -->
-    <div class="hero-image">
-        <header class="header fade-in">
-            <nav class="navbar">
-                <div class="logo">love__/</div>
-                <ul class="nav-links">
-                    <li><a href="/" class="nav-link">Home</a></li>
-                    <li><a href="/wishlist/" class="nav-link">Minha Lista</a></li>
-                    <li><a href="/add-item/" class="nav-link">Adicionar Item</a></li>
-                    <li><a href="/about/" class="nav-link">Sobre</a></li>
-                </ul>
-            </nav>
-        </header>
+<!-- Header BEFORE the hero image -->
+<header class="header fade-in">
+    <nav class="navbar">
+        <div class="logo">To love you</div>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/wishlist/" class="nav-link">Minha Lista</a></li>
+            <li><a href="/add-item/" class="nav-link">Adicionar Item</a></li>
+            <li><a href="/about/" class="nav-link">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <!-- Hero Section -->
-        <section class="hero fade-in">
-            <h1 class="hero-title">Pro futuro ideal</h1>
-            <p class="hero-subtitle">
-                Organize todos os itens que você deseja ter. Nunca mais esqueça aquilo que você realmente quer!
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="/wishlist/" class="btn">Ver Minha Lista</a>
-                <a href="/add-item/" class="btn btn-secondary">Adicionar Item</a>
-            </div>
+<!-- Hero image section -->
+<div class="hero-image">
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <h1 class="hero-title">Pro futuro ideal</h1>
+        <p class="hero-subtitle">
+            Organize todos os itens que você deseja ter. Nunca mais esqueça aquilo que você realmente quer!
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/wishlist/" class="btn">Criar uma Lista</a>
+            <a href="/add-item/" class="btn btn-secondary">Ver minha Lista</a>
+        </div>
+    </section>
+</div>
+
         </section>
     </div>
         <!-- Features Section -->
