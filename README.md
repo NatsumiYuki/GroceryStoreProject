@@ -10,7 +10,8 @@ I'm developing a full-featured Wish List web application using:
 
 color pallet: https://coolors.co/e1b5b9-f8c7cc-81a684-6c9778-57886c-466060-0e0f19
 
-### Here's a breakdown of setting up a Django environment:
+### Here's a breakdown of how Django works:
+### 1.0 Setting up enviroment
 
 Create a Virtual Environment.
 ```
@@ -32,10 +33,19 @@ Run Development Server
 ```
 python manage.py runserver
 ```
-When starting your project you'll get the following files
 
+When starting your project you'll get the following files:
 
-myproject/  manage.py   myproject /  __init__.py  settings.py  urls.py  asgi.py  wsgi.py/
+```
+myproject/          # Root project directory
+├── manage.py       # Command-line utility
+└── myproject/      # Project package (Python package)
+    ├── __init__.py
+    ├── settings.py
+    ├── urls.py
+    ├── wsgi.py
+    └── asgi.py
+```
 
 ### 1.1 Manage.py
 This is Django remote control.
@@ -80,7 +90,6 @@ Each app is like a module:
 - api
 
 Each app is independent, which makes Django scalable.
-myapp / ── admin.py ── apps.py ── models.py ── views.py ── tests.py ── migrations/
 
 ### 2.1 Models.py
 Where you define database tables using Python classes.
@@ -127,8 +136,6 @@ python manage.py migrate
 Django updates the database automatically.
 
 ### 3 Templates - Frontend
-myapp/ templates/ page.html
-
 Templates use Django’s own syntax:
 - {{ }} → variables
 - {% %} → logic
@@ -156,28 +163,7 @@ Both are configured in settings.py.
          v
     HTTP Response
 
-Meaning:
 
-1.User goes to a URL
-
-2.Django matches a view
-
-3.View may read or write to the database
-
-4.View sends data into a template
-
-5.Template returns HTML
-
-6.Browser displays the result
-
-### 7. Security in Django
-
-Django automatically protects against:
-- SQL injection
-- XSS (Cross-Site Scripting)
-- CSRF attacks
-- Clickjacking
-- Password hashing
 
 
 
