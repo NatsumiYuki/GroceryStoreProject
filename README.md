@@ -49,7 +49,8 @@ myproject/          # Root project directory
 
 ### 1.1 Manage.py
 This is Django remote control.
-- You use it to:
+
+You use it to:
 - Run the server
 - Create apps
 - Apply database migrations
