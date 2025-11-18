@@ -10,14 +10,18 @@
     
     <!-- HTMX -->
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-<!-- Header BEFORE the hero image -->
+</head>
+
+<body>
+
+<!-- Header -->
 <header class="header fade-in">
     <nav class="navbar">
-        <div class="logo">Make a Wish </div>
+        <div class="logo">Make a Wish</div>
         <ul class="nav-links">
             <li><a href="/" class="nav-link">Home</a></li>
-            <li><a href="/wishlist/" class="nav-link">Minha Lista</a></li>
-            <li><a href="/add-item/" class="nav-link">Adicionar Item</a></li>
+            <li><a href="/minhas-listas/" class="nav-link">Minhas Listas</a></li>
+            <li><a href="/criar-lista/" class="nav-link">Criar Lista</a></li>
             <li><a href="/about/" class="nav-link">Sobre</a></li>
         </ul>
     </nav>
@@ -31,70 +35,67 @@
         <p class="hero-subtitle">
             Organize todos os itens que você deseja ter. Nunca mais esqueça aquilo que você realmente quer!
         </p>
+
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="/wishlist/" class="btn">Criar uma Lista</a>
-            <a href="/add-item/" class="btn btn-secondary">Ver minha Lista</a>
+            <a href="/criar-lista/" class="btn">Criar uma Lista</a>
+            <a href="/minhas-listas/" class="btn btn-secondary">Ver minhas Listas</a>
         </div>
     </section>
 </div>
 
-        </section>
+<!-- Features Section -->
+<section class="features">
+    <div class="feature-card fade-in">
+        <div class="feature-icon">📝</div>
+        <h3 class="feature-title">Adicione Itens</h3>
+        <p class="feature-description">
+            Adicione itens com nome, descrição, preço e categoria. Mantenha tudo organizado.
+        </p>
     </div>
-        <!-- Features Section -->
-        <section class="features">
-            <div class="feature-card fade-in">
-                <div class="feature-icon">📝</div>
-                <h3 class="feature-title">Adicione Itens</h3>
-                <p class="feature-description">
-                    Adicione itens com nome, descrição, preço e categoria. Mantenha tudo organizado.
-                </p>
-            </div>
-            
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🎯</div>
-                <h3 class="feature-title">Defina Prioridades</h3>
-                <p class="feature-description">
-                    Marque os itens mais importantes para você. Saiba o que você mais deseja.
-                </p>
-            </div>
-            
-            <div class="feature-card fade-in">
-                <div class="feature-icon">📱</div>
-                <h3 class="feature-title">Acesse em Qualquer Lugar</h3>
-                <p class="feature-description">
-                    Sua lista disponível em todos os dispositivos. Sempre que você precisar.
-                </p>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="hero">
-            <h2 style="margin-bottom: 2rem;">Comece Agora Mesmo</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: bold; color: #4F46E5;">1</div>
-                    <p>Crie sua conta</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: bold; color: #10B981;">2</div>
-                    <p>Adicione itens</p>
-                </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: bold; color: #F59E0B;">3</div>
-                    <p>Compartilhe</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2025 MyWishList. Todos os direitos reservados.</p>
-            <p style="margin-top: 0.5rem; opacity: 0.8;">Feito com ❤️ para organizar seus desejos</p>
-        </footer>
+    
+    <div class="feature-card fade-in">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Defina Prioridades</h3>
+        <p class="feature-description">
+            Marque os itens mais importantes para você. Saiba o que você mais deseja.
+        </p>
     </div>
+    
+    <div class="feature-card fade-in">
+        <div class="feature-icon">📱</div>
+        <h3 class="feature-title">Acesse em Qualquer Lugar</h3>
+        <p class="feature-description">
+            Sua lista disponível em todos os dispositivos. Sempre que você precisar.
+        </p>
+    </div>
+</section>
 
-    <script src="{% static 'js/script.js' %}"></script>
+<!-- Stats Section -->
+<section class="hero">
+    <h2 style="margin-bottom: 2rem;">Comece Agora Mesmo</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+        <div style="text-align: center;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #4F46E5;">1</div>
+            <p>Crie sua lista</p>
+        </div>
+        <div style="text-align: center;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #10B981;">2</div>
+            <p>Adicione itens</p>
+        </div>
+        <div style="text-align: center;">
+            <div style="font-size: 2.5rem; font-weight: bold; color: #F59E0B;">3</div>
+            <p>Visualize e organize</p>
+        </div>
+    </div>
+</section>
 
-   
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 MyWishList. Todos os direitos reservados.</p>
+    <p style="margin-top: 0.5rem; opacity: 0.8;">Feito com ❤️ para organizar seus desejos</p>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
 </body>
 </html>
